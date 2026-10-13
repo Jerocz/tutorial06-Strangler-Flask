@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import CompraView, compra_rapida_fbv, CompraRapidaView, CompraRapidaServiceView, InventarioView
-from .api.views import CompraAPIView
+from .api.views import CompraAPIView, ProductoListAPIView
 
 urlpatterns = [
     # Usamos .as_view() para habilitar la CBV
@@ -14,4 +14,7 @@ urlpatterns = [
     # Tutorial 03 - inventario en HTML y API REST
     path('inventario/', InventarioView.as_view(), name='inventario'),
     path('api/v1/comprar/', CompraAPIView.as_view(), name='api_comprar'),
+
+    # Tutorial 06 - listado de productos (sigue en Django v1)
+    path('api/v1/productos/', ProductoListAPIView.as_view(), name='api_productos'),
 ]
