@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Inventario</h1>
+    <table border="1" cellpadding="6">
+        <tr>
+            <th>ID</th>
+            <th>Libro</th>
+            <th>Precio</th>
+            <th>Unidades</th>
+        </tr>
+        {% for item in inventario %}
+        <tr>
+            <td>{{ item.libro.id }}</td>
+            <td>{{ item.libro.titulo }}</td>
+            <td>${{ item.libro.precio }}</td>
+            <td>{{ item.cantidad }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
